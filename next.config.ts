@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   reactStrictMode: true,
+
 };
 
 export default nextConfig;
