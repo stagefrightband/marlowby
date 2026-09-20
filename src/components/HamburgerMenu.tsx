@@ -8,11 +8,10 @@ const HamburgerMenu: React.FC = () => {
   };
   return (
     <nav className="hamburger-nav">
-  
       <div className="hamburger-menu" onClick={toggleMenu}>
-        <div className={`bar1 ${isOpen ? 'change' : ''}`}></div>
-        <div className={`bar2 ${isOpen ? 'change' : ''}`}></div>
-        <div className={`bar3 ${isOpen ? 'change' : ''}`}></div>
+        <div className={`bar1 ${isOpen ? "change" : ""}`}></div>
+        <div className={`bar2 ${isOpen ? "change" : ""}`}></div>
+        <div className={`bar3 ${isOpen ? "change" : ""}`}></div>
       </div>
       <ul className={`hamburger-links ${isOpen ? "open" : ""}`}>
         <li>

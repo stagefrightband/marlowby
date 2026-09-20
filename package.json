@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "Marlowby",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -16,19 +16,13 @@
     "build": "node sitemap.ts && GENERATE_SOURCEMAP=false next build",
     "start": "next start"
   },
-  "browserslist": {
-  "production": [
-    "changed 12 months",
-    ">= 1%",
-    "not dead",
-    "not op_mini all"
+  "browserslist": [
+    "Pixel 2",
+    "Chrome >= 90",
+    "Firefox >= 90",
+    "Safari >= 15",
+    "Edge >= 90"
   ],
-  "development": [
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version"
-  ]
-},
   "devDependencies": {
     "@types/node": "^26.6.1",
     "@types/react": "^19.3.0",

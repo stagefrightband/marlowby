@@ -1,9 +1,19 @@
 import React from "react";
 import "@/globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marlowby | Contact Us",
+  description: "Contact us to get more information!",
+  openGraph: {
+    title: "Marlowby | Contact Us",
+    description: "Contact us to get more information!",
+  },
+};
+
 const ContactUs: React.FC = () => {
   return (
     <>
-  
       <h1 className="fade-in" style={{ textAlign: "center", fontSize: "2rem" }}>
         Contact Us
       </h1>
@@ -19,40 +29,36 @@ const ContactUs: React.FC = () => {
         </div>
         <div className="contact-right fade-in">
           <h2>Bookings</h2>
-            <div className="booking-field">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                autoComplete="name"
-                required
-              />
-            </div>
-            <div className="booking-field">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                autoComplete="email"
-                required
-              />
-            </div>
-            <div className="booking-field">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                className="message-textarea"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="submit-button"
-            >
-            </button>
+          <div className="booking-field">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autoComplete="name"
+              required
+            />
+          </div>
+          <div className="booking-field">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autoComplete="email"
+              required
+            />
+          </div>
+          <div className="booking-field">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              className="message-textarea"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="submit-button"></button>
         </div>
       </div>
     </>

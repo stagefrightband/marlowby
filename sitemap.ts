@@ -1,36 +1,40 @@
-import { SitemapStream, EnumChangefreq } from 'sitemap';
-import type { SitemapItemLoose } from 'sitemap';
-import { createWriteStream } from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { SitemapStream, EnumChangefreq } from "sitemap";
+import type { SitemapItemLoose } from "sitemap";
+import { createWriteStream } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL: string = 'https://stagefrightband.github.io';
+const BASE_URL: string = "https://stagefrightband.github.io";
 
 const links: SitemapItemLoose[] = [
-  { url: '/', changefreq: EnumChangefreq.DAILY, priority: 1 },
-  { url: '/aboutus', changefreq: EnumChangefreq.WEEKLY, priority: 0.8 },
-  { url: '/contactus', changefreq: EnumChangefreq.MONTHLY, priority: 0.7 },
-  { url: '/featuredcities', changefreq: EnumChangefreq.WEEKLY, priority: 0.8 },
-  { url: '/settings', changefreq: EnumChangefreq.WEEKLY, priority: 0.8 },
-  { url: '/subscriptionplans', changefreq: EnumChangefreq.MONTHLY, priority: 0.5 },
-  { url: '/whatsincluded', changefreq: EnumChangefreq.MONTHLY, priority: 0.5 }
+  { url: "/", changefreq: EnumChangefreq.DAILY, priority: 1 },
+  { url: "/aboutus", changefreq: EnumChangefreq.WEEKLY, priority: 0.8 },
+  { url: "/contactus", changefreq: EnumChangefreq.MONTHLY, priority: 0.7 },
+  { url: "/featuredcities", changefreq: EnumChangefreq.WEEKLY, priority: 0.8 },
+  { url: "/settings", changefreq: EnumChangefreq.WEEKLY, priority: 0.8 },
+  {
+    url: "/subscriptionplans",
+    changefreq: EnumChangefreq.MONTHLY,
+    priority: 0.5,
+  },
+  { url: "/whatsincluded", changefreq: EnumChangefreq.MONTHLY, priority: 0.5 },
 ];
 
 async function generateSitemap(): Promise<void> {
   return new Promise((resolve, reject) => {
     try {
       const sitemapStream = new SitemapStream({ hostname: BASE_URL });
-      const outputPath = path.resolve(__dirname, 'public', 'sitemap.xml');
+      const outputPath = path.resolve(__dirname, "public", "sitemap.xml");
       const writeStream = createWriteStream(outputPath);
 
-      writeStream.on('error', (err) => reject(err));
-      sitemapStream.on('error', (err) => reject(err));
-      
-      writeStream.on('finish', () => {
-        console.log('Sitemap successfully created at:', outputPath);
+      writeStream.on("error", (err) => reject(err));
+      sitemapStream.on("error", (err) => reject(err));
+
+      writeStream.on("finish", () => {
+        console.log("Sitemap successfully created at:", outputPath);
         resolve();
       });
 
@@ -45,5 +49,5 @@ async function generateSitemap(): Promise<void> {
 }
 
 generateSitemap().catch((error) => {
-  console.error('Error generating sitemap:', error);
+  console.error("Error generating sitemap:", error);
 });

@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'AtkinsonHyperlegible';
-  src: url('../public/Fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf') format('ttf');
+  font-family: "AtkinsonHyperlegible";
+  src: url("../public/Fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf")
+    format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,7 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 1.252vh;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 #root {
   flex: 1;
@@ -145,7 +148,9 @@ body {
   margin-bottom: 2vh;
   background-color: #f9f9f9;
   border: 0.1565vh solid #ddd;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 .profile:hover {
   transform: translateY(-0.7825vh);
@@ -285,7 +290,9 @@ h1 {
   .hamburger-links {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
     flex-direction: column;
     background-color: #000;
     position: absolute;
@@ -378,7 +385,9 @@ h1 {
   opacity: 0;
   padding: 1.5649vh 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   flex-direction: column;
   background-color: #000;
   position: absolute;

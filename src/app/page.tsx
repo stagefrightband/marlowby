@@ -1,5 +1,15 @@
 import React from "react";
 import "@/globals.css";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Marlowby | Home Page',
+  description: 'The main page of our website, where you can access all our resources.',
+  openGraph: {
+    title: 'Marlowby | Home Page',
+    description: 'The main page of our website, where you can access all our resources.',
+  },
+};
 
 const MainPage: React.FC = () => {
   return (

@@ -1,5 +1,16 @@
 import React from "react";
 import "@/globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marlowby | About Us",
+  description: "Learn more about us, what we stand for, and what we do.",
+  openGraph: {
+    title: "Marlowby | About Us",
+    description: "Learn more about us, what we stand for, and what we do.",
+  },
+};
+
 const AboutUs: React.FC = () => {
   return (
     <div className="aboutus-container fade-in">
