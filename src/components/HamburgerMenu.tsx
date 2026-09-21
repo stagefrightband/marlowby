@@ -30,22 +30,22 @@ const HamburgerMenu: React.FC = () => {
           </a>
         </li>
         <li>
-          <a href="/store" onClick={toggleMenu}>
+          <a href="/whatsincluded" onClick={toggleMenu}>
             Whats Included
           </a>
         </li>
         <li>
-          <a href="/tourdates" onClick={toggleMenu}>
+          <a href="/subscriptionplans" onClick={toggleMenu}>
             Subscription Plans
           </a>
         </li>
         <li>
-          <a href="/shoppingcart" onClick={toggleMenu}>
+          <a href="/featuredcities" onClick={toggleMenu}>
             Featured Cities
           </a>
         </li>
         <li>
-          <a href="#/settings" onClick={toggleMenu}>
+          <a href="/settings" onClick={toggleMenu}>
             Accessibility Settings
           </a>
         </li>

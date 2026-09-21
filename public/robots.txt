@@ -4,4 +4,4 @@ Disallow: /private/
 Disallow: /tmp/
 Allow: /
 
-Sitemap: https://stagefrightband.github.io/sitemap.xml
+Sitemap: https://marlowby.vercel.app/sitemap.xml

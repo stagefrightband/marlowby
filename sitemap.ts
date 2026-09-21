@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL: string = "https://stagefrightband.github.io";
+const BASE_URL: string = "https://marlowby.vercel.app";
 
 const links: SitemapItemLoose[] = [
   { url: "/", changefreq: EnumChangefreq.DAILY, priority: 1 },
