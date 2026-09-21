@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   reactStrictMode: true,
-
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;

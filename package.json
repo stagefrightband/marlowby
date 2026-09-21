@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node sitemap.ts && GENERATE_SOURCEMAP=false next build",
+    "build": "node sitemap.ts && next build",
     "start": "next start"
   },
   "browserslist": [
