@@ -462,7 +462,7 @@ h1 {
 .change.bar1 {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
-.change .bar2 {
+.change.bar2 {
   opacity: 0;
 }
 .change.bar3 {
