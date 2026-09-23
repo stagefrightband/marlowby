@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import "@/globals.css";
 const HamburgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {

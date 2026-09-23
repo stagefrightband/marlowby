@@ -1,6 +1,4 @@
-import "@/globals.css";
-
-export const Navbar: React.FC = () => {
+const Navbar: React.FC = () => {
   const publicUrl = process.env.PUBLIC_URL || "";
 
   return (
