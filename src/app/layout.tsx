@@ -1,26 +1,14 @@
-import { cookies } from "next/headers";
 import "@/globals.css";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import Navbar from "@/components/navbar";
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const cookieStore = await cookies();
-  const highContrast = cookieStore.get("highcontrast")?.value === "true";
-
-  const classNames = [highContrast ? "high-contrast" : ""]
-    .filter(Boolean)
-    .join(" ");
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={classNames}>
-      <body>
+    <html lang="en" className="font-atkinsonhyperlegible">
+      <body className="flex flex-col transition-[background-color] duration-[0.3s,color] delay-300 m-[1.252vh]">
         <HamburgerMenu />
         <Navbar />
-        <main id="root">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

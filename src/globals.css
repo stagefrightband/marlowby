@@ -3,76 +3,24 @@
 @font-face {
   font-family: "AtkinsonHyperlegible";
   src: url("../public/Fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf")
-    format("ttf");
+    format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-html,
-body {
-  font-family: "AtkinsonHyperlegible", Arial, sans-serif;
+@theme {
+  --font-atkinsonhyperlegible: 'Atkinson Hyperlegible', Arial, sans-serif;
+  --animate-fade-in: fade-in 0.5s ease-out;
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 1.252vh;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-#root {
-  flex: 1;
-}
-.high-contrast {
-  --background-color: black !important;
-  --text-color: white !important;
-  --link-color: yellow !important;
-  --button-background: black !important;
-  --button-text: white !important;
-  --button-border: grey !important;
-  --border-color: white !important;
-  background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
-  border-color: var(--border-color) !important;
-}
-.high-contrast a {
-  color: var(--link-color) !important;
-  text-decoration: underline !important;
-}
-.high-contrast button,
-.high-contrast input[type="button"],
-.high-contrast input[type="submit"] {
-  background-color: var(--button-background) !important;
-  color: var(--button-text) !important;
-  border: 1px solid var(--button-border) !important;
-}
-.high-contrast .profile,
-.high-contrast .welcome-text-container,
-.high-contrast .mainpage-text,
-.high-contrast .aboutus-container,
-.high-contrast .about-section,
-.high-contrast .profiles-grid,
-.high-contrast .hamburger-nav,
-.high-contrast .hamburger-links,
-.high-contrast .hamburger-links li,
-.high-contrast .hamburger-links a,
-.high-contrast .fade-in,
-.high-contrast .hamburger-menu,
-.high-contrast .hamburger-menu div,
-.high-contrast .change.bar1,
-.high-contrast .change.bar2,
-.high-contrast .change.bar3,
-.high-contrast audio,
-.high-contrast .welcome-text-container {
-  background-color: var(--background-color) !important;
-  color: var(--text-color) !important;
-  border-color: var(--border-color) !important;
-}
-.high-contrast .about-section p,
-.high-contrast .profile p {
-  color: white !important;
-}
-.high-contrast .profile,
+
 .profile {
   border-radius: 1.565vh;
   border: 0.156vh solid gray;
@@ -89,11 +37,6 @@ body {
   transform: translateY(-0.7825vh);
   box-shadow: 0 0.626vh 1.8779vh rgba(0, 0, 0, 0.1);
 }
-.high-contrast .profile {
-  background-color: black !important;
-  color: white !important;
-  border-color: white !important;
-}
 .profile h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5vh;
@@ -101,9 +44,6 @@ body {
 .profile p {
   font-size: 1rem;
   color: #666;
-}
-h1 {
-  font-size: 1.5rem;
 }
 @media (max-width: 768px) {
   .hamburger-menu {
@@ -156,28 +96,6 @@ h1 {
     color: white;
   }
 }
-@media (min-width: 769px) {
-  .hamburger-menu {
-    display: none;
-  }
-  .hamburger-links {
-      display: none;
-  }
-}
-.mainpage-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vh;
-  position: relative;
-  z-index: 1;
-  padding-top: 3rem;
-}
-.mainpage-container h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  text-align: center;
-}
 .aboutus-container {
   padding: 2vh;
   max-width: 1200px;
@@ -229,44 +147,6 @@ h1 {
   width: max-content;
   display: flex;
 }
-.hamburger-links li {
-  list-style: none;
-  width: fit-content;
-}
-.hamburger-links a {
-  font-size: 1.25rem;
-  color: #f2f2f2;
-  text-decoration: none;
-}
-.hamburger-links a:hover {
-  background-color: #575757;
-  color: white;
-}
-@media (max-width: 768px) {
-}
-@media (min-width: 769px) {
-  .hamburger-nav {
-    display: none;
-  }
-}
-.mainpage-text {
-  color: white;
-  background-color: black;
-  border-radius: 1.252vh;
-}
-@media (max-width: 768px) {
-}
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .hamburger-menu {
   display: inline-block;
   cursor: pointer;
@@ -278,9 +158,6 @@ h1 {
   margin: 6px 0;
   transition: 0.4s;
 }
-.high-contrast .hamburger-menu div {
-  background-color: white !important;
-}
 .change.bar1 {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
@@ -289,9 +166,4 @@ h1 {
 }
 .change.bar3 {
   transform: rotate(45deg) translate(-8px, -8px);
-}
-.welcome-text-container {
-  padding: 3vh 2vh 2vh 2vh;
-  background-color: black;
-  border-radius: 1.252vh;
 }

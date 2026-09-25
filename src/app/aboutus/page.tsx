@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="aboutus-container fade-in">
+    <div className="aboutus-container animate-fade-in">
       <div className="about-section">
         <h1>About Us</h1>
         <p className="about-section-text">
