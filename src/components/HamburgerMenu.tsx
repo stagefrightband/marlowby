@@ -6,7 +6,7 @@ const HamburgerMenu: React.FC = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="hamburger-nav lg:hidden [&_li]:list-none [&_li]:w-fit [&_a]:text-xl [&_a]:text-[#f2f2f2] [&_a]:no-underline hover:[&_a]:bg-[#575757] hover:[&_a]:text-white">
+    <nav className="hamburger-nav md:hidden [&_li]:list-none [&_li]:w-fit [&_a]:text-xl [&_a]:text-[#f2f2f2] [&_a]:no-underline hover:[&_a]:bg-[#575757] hover:[&_a]:text-white">
       <div className="hamburger-menu" onClick={toggleMenu}>
         <div className={`bar1 ${isOpen ? "change" : ""}`}></div>
         <div className={`bar2 ${isOpen ? "change" : ""}`}></div>
