@@ -9,9 +9,10 @@
   font-display: swap;
 }
 @theme {
-  --font-atkinsonhyperlegible: 'Atkinson Hyperlegible', Arial, sans-serif;
+  --font-atkinsonhyperlegible: "Atkinson Hyperlegible", Arial, sans-serif;
   --animate-fade-in: fade-in 0.5s ease-out;
-@keyframes fade-in {
+  --animate-fade-out: fade-out 0.5s ease forwards;
+  @keyframes fade-in {
     from {
       opacity: 0;
     }
@@ -19,6 +20,21 @@
       opacity: 1;
     }
   }
+  @keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
 }
 
 .profile {
@@ -45,57 +61,6 @@
   font-size: 1rem;
   color: #666;
 }
-@media (max-width: 768px) {
-  .hamburger-menu {
-    display: block;
-    position: relative;
-    padding: 1vh;
-    background-color: black;
-    border-radius: 1.565vh;
-  }
-  .hamburger-links {
-    display: flex;
-  }
-  #hamburgerMenu {
-    cursor: pointer;
-    font-size: 25px;
-    background: none;
-    border: none;
-  }
-  .hamburger-links {
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
-    flex-direction: column;
-    background-color: #000;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: fit-content;
-    border-radius: 0.7825vh;
-    box-shadow: 0 0.626vh 1.252vh rgba(0, 0, 0, 0.1);
-    gap: 1rem;
-  }
-  .hamburger-links.open {
-    opacity: 1;
-    visibility: visible;
-    padding: 1.5649vh 0;
-    width: max-content;
-  }
-  .hamburger-links a {
-    padding: 0.5rem;
-    font-size: 1.25rem;
-    color: #f2f2f2;
-    text-decoration: none;
-    text-align: left;
-  }
-  .hamburger-links a:hover {
-    background-color: #575757;
-    color: white;
-  }
-}
 .aboutus-container {
   padding: 2vh;
   max-width: 1200px;
@@ -118,52 +83,4 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2vh;
-}
-.hamburger-nav {
-  position: fixed;
-  z-index: 2000;
-}
-.hamburger-links {
-  opacity: 0;
-  padding: 1.5649vh 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-  flex-direction: column;
-  background-color: #000;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: max-content;
-  border-radius: 0.7825vh;
-  box-shadow: 0 0.626vh 1.252vh rgba(0, 0, 0, 0.1);
-  z-index: 2002;
-}
-.hamburger-links.open {
-  opacity: 1;
-  visibility: visible;
-  padding: 1.5649vh 0;
-  width: max-content;
-  display: flex;
-}
-.hamburger-menu {
-  display: inline-block;
-  cursor: pointer;
-}
-.hamburger-menu div {
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-.change.bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-.change.bar2 {
-  opacity: 0;
-}
-.change.bar3 {
-  transform: rotate(45deg) translate(-8px, -8px);
 }
