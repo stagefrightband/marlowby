@@ -21,6 +21,7 @@ export default function HamburgerMenu() {
     <nav className="fixed z-2000 md:hidden">
       <button 
         onClick={toggle}
+        aria-label="Main Menu"
         className="relative py-[2vh] px-[1.5vh] bg-black rounded-[1.565vh] flex flex-col gap-1.5 cursor-pointer aria-label='Toggle Menu'"
       >
         <div className={`w-8.75 h-1.25 bg-white transition-all duration-400 ${isOpen ? "-rotate-45 translate-y-2.75" : ""}`} />
