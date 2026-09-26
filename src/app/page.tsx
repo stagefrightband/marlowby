@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
 };
 
-const MainPage: React.FC = () => {
+export default function MainPage() {
   return (
     <div className="flex flex-col items-center relative z-1 pt-12 p-[2vh] animate-fade-in">
       <div className="bg-[black] pt-[3vh] pb-[2vh] px-[2vh] rounded-[1.252vh]">
@@ -18,5 +18,3 @@ const MainPage: React.FC = () => {
       </div>
   );
 };
-
-export default MainPage;
