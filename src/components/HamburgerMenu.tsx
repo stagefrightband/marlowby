@@ -21,7 +21,7 @@ export default function HamburgerMenu() {
     <nav className="fixed z-2000 md:hidden">
       <button 
         onClick={toggle}
-        className="relative p-[1.5vh] bg-black rounded-[1.565vh] flex flex-col gap-1.5 cursor-pointer aria-label='Toggle Menu'"
+        className="relative py-[2vh] px-[1.5vh] bg-black rounded-[1.565vh] flex flex-col gap-1.5 cursor-pointer aria-label='Toggle Menu'"
       >
         <div className={`w-8.75 h-1.25 bg-white transition-all duration-400 ${isOpen ? "-rotate-45 translate-y-2.75" : ""}`} />
         <div className={`w-8.75 h-1.25 bg-white transition-all duration-400 ${isOpen ? "opacity-0" : ""}`} />
@@ -33,8 +33,7 @@ export default function HamburgerMenu() {
             <Link 
               href={href} 
               onClick={toggle}
-              className="block p-2 text-xl text-[#f2f2f2] no-underline text-left hover:bg-[#575757] hover:text-white"
-            >
+              className="block p-1.5 text-xl text-[#f2f2f2] no-underline text-left hover:bg-[#575757] hover:text-white">
               {label}
             </Link>
           </li>
