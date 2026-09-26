@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const menuItems = [
   { href: "/", label: "Home" },
-  { href: "/aboutus", label: "About Us" },
-  { href: "/contactus", label: "Contact Us" },
-  { href: "/whatsincluded", label: "Whats Included" },
-  { href: "/subscriptionplans", label: "Subscription Plans" },
-  { href: "/featuredcities", label: "Featured Cities" },
+  { href: "/about-us", label: "About Us" },
+  { href: "/contact-us", label: "Contact Us" },
+  { href: "/whats-included", label: "Whats Included" },
+  { href: "/subscription-plans", label: "Subscription Plans" },
+  { href: "/featured-cities", label: "Featured Cities" },
   { href: "/settings", label: "Accessibility Settings" },
 ];
 
