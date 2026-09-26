@@ -1,55 +1,45 @@
 "use client";
+
 import React, { useState } from "react";
-const HamburgerMenu: React.FC = () => {
+import Link from "next/link";
+
+const menuItems = [
+  { href: "/", label: "Home" },
+  { href: "/aboutus", label: "About Us" },
+  { href: "/contactus", label: "Contact Us" },
+  { href: "/whatsincluded", label: "Whats Included" },
+  { href: "/subscriptionplans", label: "Subscription Plans" },
+  { href: "/featuredcities", label: "Featured Cities" },
+  { href: "/settings", label: "Accessibility Settings" },
+];
+
+export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <nav className="fixed z-2000 md:hidden [&_li]:list-none [&_li]:w-fit [&_a]:text-xl [&_a]:text-[#f2f2f2] [&_a]:no-underline hover:[&_a]:bg-[#575757] hover:[&_a]:text-white">
-      <div className="relative p-[1vh] bg-black rounded-[1.565vh] inline-block cursor-pointer [&>div]:w-8.75 [&>div]:h-1.25 [&>div]:bg-white [&>div]:my-1.5 [&>div]:mx-0 [&>div]:transition-all [&>div]:duration-400" onClick={toggleMenu}>
-        <div className={`bar1 ${isOpen ? "-rotate-45 translate-y-2.75" : ""}`}></div>
-        <div className={`bar2 ${isOpen ? "opacity-0" : ""}`}></div>
-        <div className={`bar3 ${isOpen ? "rotate-45 -translate-y-2.5" : ""}`}></div>
-      </div>
-      <ul className={`absolute top-full left-0 flex flex-col w-max gap-4 bg-black rounded-[0.7825vh] p-[1.5649vh_0] shadow-[0_0.626vh_1.252vh_rgba(0,0,0,0.1)] transition-[opacity,visibility] duration-300 ease-out [&_a]:p-2 [&_a]:text-xl [&_a]:text-[#f2f2f2] [&_a]:no-underline [&_a]:text-left [&_a]:hover:bg-[#575757] [&_a]:hover:text-white ${isOpen ? "w-max px-0 py-[1.5649vh] animate-fade-in" : "animate-fade-out"}`}>
-        <li>
-          <a href="/" onClick={toggleMenu}>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="/aboutus" onClick={toggleMenu}>
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="/contactus" onClick={toggleMenu}>
-            Contact Us
-          </a>
-        </li>
-        <li>
-          <a href="/whatsincluded" onClick={toggleMenu}>
-            Whats Included
-          </a>
-        </li>
-        <li>
-          <a href="/subscriptionplans" onClick={toggleMenu}>
-            Subscription Plans
-          </a>
-        </li>
-        <li>
-          <a href="/featuredcities" onClick={toggleMenu}>
-            Featured Cities
-          </a>
-        </li>
-        <li>
-          <a href="/settings" onClick={toggleMenu}>
-            Accessibility Settings
-          </a>
-        </li>
+    <nav className="fixed z-2000 md:hidden">
+      <button 
+        onClick={toggle}
+        className="relative p-[1.5vh] bg-black rounded-[1.565vh] flex flex-col gap-1.5 cursor-pointer aria-label='Toggle Menu'"
+      >
+        <div className={`w-8.75 h-1.25 bg-white transition-all duration-400 ${isOpen ? "-rotate-45 translate-y-2.75" : ""}`} />
+        <div className={`w-8.75 h-1.25 bg-white transition-all duration-400 ${isOpen ? "opacity-0" : ""}`} />
+        <div className={`w-8.75 h-1.25 bg-white transition-all duration-400 ${isOpen ? "rotate-45 -translate-y-2.5" : ""}`} />
+      </button>
+      <ul className={`absolute top-[calc(100%+10px)] left-0 flex flex-col w-max bg-black rounded-[0.7825vh] py-[1.5649vh] shadow-[0_0.626vh_1.252vh_rgba(0,0,0,0.1)] transition-all duration-300 ${isOpen ? "animate-fade-in" : "animate-fade-out"}`}>
+        {menuItems.map(({ href, label }) => (
+          <li key={href}>
+            <Link 
+              href={href} 
+              onClick={toggle}
+              className="block p-2 text-xl text-[#f2f2f2] no-underline text-left hover:bg-[#575757] hover:text-white"
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
 };
-export default HamburgerMenu;

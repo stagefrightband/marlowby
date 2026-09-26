@@ -10,28 +10,26 @@ export const metadata: Metadata = {
       "Adjust settings on our website to make your viewing experience more enjoyable.",
   },
 };
-const AboutUs: React.FC = () => {
+export default function Settings() {
+    const profileItems = [
+    { id: 2, title: "Setting 2", text: "Setting 2" },
+    { id: 3, title: "Setting 3", text: "Setting 3" },
+    { id: 4, title: "Setting 4", text: "Setting 4" },
+  ];
   return (
-    <div className="aboutus-container animate-fade-in">
-      <div className="about-section">
+    <div className="max-w-300 mx-auto my-0 p-[2vh] animate-fade-in">
+      <div className="text-center mb-[4vh] [&_h1]:text-[2rem] [&_h1]:mt-0 [&_p]:text-[1.2rem] [&_p]:leading-relaxed [&_p]:text-[#555]">
         <h1>Setting 1</h1>
-        <p className="about-section-text">Setting 1</p>
+        <p>Setting 1 Text</p>
       </div>
-      <div className="profiles-grid">
-        <div className="profile animate-fade-in">
-          <h2>Setting 2</h2>
-          <p className="profile-text">Setting 2</p>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[2vh] ">
+       {profileItems.map((item) => (
+        <div key={item.id} className="rounded-[1.565vh] border-[0.156vh] border-solid border-gray-400 p-[2vh] text-center mb-[2vh] bg-[#f9f9f9] transition-all duration-300 ease-in-out hover:translate-y-[-0.7825vh] hover:shadow-[0_0.626vh_1.8779vh_rgba(0,0,0,0.1)] animate-fade-in">
+          <h2 className="text-2xl mb-[0.5vh]">{item.title}</h2>
+          <p className="text-base text-[#666]">{item.text}</p>
         </div>
-        <div className="profile animate-fade-in">
-          <h2>Setting 3</h2>
-          <p className="profile-text">Setting 3</p>
-        </div>
-        <div className="profile animate-fade-in">
-          <h2>Setting 4</h2>
-          <p className="profile-text">Setting 4</p>
-        </div>
+      ))}
       </div>
     </div>
   );
 };
-export default AboutUs;

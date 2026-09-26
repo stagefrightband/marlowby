@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   },
 };
 
-const ContactUs: React.FC = () => {
+export default function ContactUs() {
   return (
     <>
-      <h1 className="animate-fade-in" style={{ textAlign: "center", fontSize: "2rem" }}>
+      <h1 className="animate-fade-in text-center text-3xl">
         Contact Us
       </h1>
       <div className="flex flex-row justify-center items-start gap-[4vh] p-[2vh] bg-[#f0f0f0] rounded-[1.5649vh] shadow-[0_0.626vh_1.252vh_rgba(0,0,0,0.1)] slide-in">
@@ -25,7 +25,7 @@ const ContactUs: React.FC = () => {
             stagefrightbandemail@gmail.com
           </a>
         </div>
-        <div className="w-[45%] bg-[#ffffff] p-[2vh] rounded-[1.252vh] flex flex-col animate-fade-in [&>div]:flex [&>div]:flex-col [&>div]:items-start [&>div]:gap-[0.5vh] [&>div]:mb-[1vh] [&>div]:p-[1vh] [&>div]:rounded-[0.7825vh] [&>div]:border-[0.1565vh] [&>div]:border-solid [&>div]:border-black [&_label]:text-base [&_label]:text-[#555] [&_label]:mb-[0.5vh] [&_input]:text-base [&_input]:transition-[border-color] [&_input]:duration-300 [&_input]:p-[0.8vh] [&_input]:rounded-[0.7825vh] [&_input]:border-[0.1565vh] [&_input]:border-solid [&_input]:border-[#ccc] [&_input]:resize-y focus:[&_input]:border-gray-500">
+        <form className="w-[45%] bg-[#ffffff] p-[2vh] rounded-[1.252vh] flex flex-col animate-fade-in [&>div]:flex [&>div]:flex-col [&>div]:items-start [&>div]:gap-[0.5vh] [&>div]:mb-[1vh] [&>div]:p-[1vh] [&>div]:rounded-[0.7825vh] [&>div]:border-[0.1565vh] [&>div]:border-solid [&>div]:border-black [&_label]:text-base [&_label]:text-[#555] [&_label]:mb-[0.5vh] [&_input]:text-base [&_input]:transition-[border-color] [&_input]:duration-300 [&_input]:p-[0.8vh] [&_input]:rounded-[0.7825vh] [&_input]:border-[0.1565vh] [&_input]:border-solid [&_input]:border-[#ccc] [&_input]:resize-y focus:[&_input]:border-gray-500">
           <h2>Bookings</h2>
           <div>
             <label htmlFor="name">Name</label>
@@ -57,9 +57,8 @@ const ContactUs: React.FC = () => {
             ></textarea>
           </div>
           <button type="submit" className="bg-[#aa0404] text-white px-[2.5vh] py-[0.8vh] border-none rounded-[0.7825vh] cursor-pointer text-base transition-colors duration-300 hover:bg-[#ff5722]">Submit</button>
-        </div>
+        </form>
       </div>
     </>
   );
 };
-export default ContactUs;
