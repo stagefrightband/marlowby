@@ -1,15 +1,6 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "AtkinsonHyperlegible";
-  src: url("../public/Fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 @theme {
-  --font-atkinsonhyperlegible: "Atkinson Hyperlegible", Arial, sans-serif;
   --animate-fade-in: fade-in 0.5s ease-out;
   --animate-fade-out: fade-out 0.5s ease forwards;
   @keyframes fade-in {
