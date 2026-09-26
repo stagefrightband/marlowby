@@ -3,6 +3,10 @@ import "@/globals.css";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import Navbar from "@/components/navbar";
 
+const HamburgerMenu = dynamic(() => import("@/components/HamburgerMenu"), {
+  ssr: false, 
+});
+
 const atkinson = localFont({
   src: "../../public/Fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf",
   variable: "--font-atkinsonhyperlegible",
