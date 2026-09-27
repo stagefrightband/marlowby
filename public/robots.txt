@@ -1,7 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow: /private/
-Disallow: /tmp/
-Allow: /
-
-Sitemap: https://marlowby.vercel.app/sitemap.xml
