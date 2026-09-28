@@ -13,6 +13,5 @@ yarn-debug.log*
 yarn-error.log*
 node_modules/
 dist/
-sitemap.xml
 .next/
 .prettierrc

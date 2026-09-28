@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node sitemap.ts && next build",
+    "build": "next build",
     "start": "next start"
   },
   "browserslist": [
@@ -29,7 +29,6 @@
     "@types/react-dom": "^19.3.0",
     "postcss": "^8.5.28",
     "postcss-load-config": "^6.0.1",
-    "sitemap": "^9.0.1",
     "tailwindcss": "^4.3.3"
   }
 }
