@@ -12,7 +12,7 @@ const atkinson = localFont({
 export default function RootLayout({children,}:Readonly<{children:React.ReactNode;}>) {
   return (
     <html lang="en" className={`${atkinson.variable}`}>
-      <body className="flex flex-col transition-[background-color] duration-[0.3s,color] delay-300 m-[1.252vh]">
+      <body className="flex flex-col transition-colors duration-300 delay-300 m-[1.252vh]">
         <HamburgerMenu />
         <Navbar />
         <main>{children}</main>

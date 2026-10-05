@@ -22,7 +22,7 @@ export default function SubscriptionPlans() {
       </div>
       <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[2vh]">
         {profileItems.map((item) => (
-          <div key={item.id} className="animate-fade-in mb-[2vh] rounded-[1.565vh] border-[0.156vh] border-solid border-gray-400 bg-[#f9f9f9] p-[2vh] text-center transition-all duration-300 ease-in-out hover:translate-y-[-0.7825vh] hover:shadow-[0_0.626vh_1.8779vh_rgba(0,0,0,0.1)]">
+          <div key={item.id} className="animate-fade-in mb-[2vh] rounded-[1.565vh] border-[0.156vh] border-gray-400 bg-[#f9f9f9] p-[2vh] text-center transition-all duration-300 ease-in-out hover:translate-y-[-0.7825vh] hover:shadow-[0_0.626vh_1.8779vh_rgba(0,0,0,0.1)]">
             <h2 className="mb-[0.5vh] text-2xl">{item.title}</h2>
             <p className="text-base text-[#666]">{item.text}</p>
           </div>

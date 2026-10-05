@@ -24,7 +24,7 @@ export default function HamburgerMenu() {
         <div className={`h-1.25 w-8.75 bg-white transition-all duration-400 ${isOpen ? "opacity-0" : ""}`} />
         <div className={`h-1.25 w-8.75 bg-white transition-all duration-400 ${isOpen ? "-translate-y-2.5 rotate-45" : ""}`} />
       </button>
-      <ul className={`absolute top-[calc(100%+10px)] left-0 flex w-max flex-col rounded-[0.7825vh] bg-black py-[1.5649vh] shadow-[0_0.626vh_1.252vh_rgba(0,0,0,0.1)] transition-all duration-300 ${isOpen ? "animate-fade-in" : "animate-fade-out"}`}>
+      <ul className={`absolute top-[calc(100%+10px)] flex w-max flex-col rounded-[0.7825vh] bg-black py-[1.5649vh] transition-all duration-300 ${isOpen ? "animate-fade-in" : "animate-fade-out"}`}>
         {menuItems.map(({ href, label }) => (
           <li key={href}>
             <Link href={href} onClick={toggle} className="block p-1.5 text-left text-xl text-[#f2f2f2] no-underline hover:bg-[#575757] hover:text-white">

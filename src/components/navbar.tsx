@@ -11,7 +11,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="animate-fade-in relative z-50 mb-[2vh] hidden h-16 items-center justify-between rounded-lg bg-[#333] px-[3.13vh] md:flex">
+    <nav className="animate-fade-in mb-[2vh] hidden h-16 items-center rounded-lg bg-[#333] px-[3.13vh] md:flex">
       <Link href="/">
         <Image src="/Media/FrightTitleIcon.webp" alt="Marlowby Logo" width={64} height={64} className="m-[0.313vh] h-full w-full p-[1.565vh]" />
       </Link>
