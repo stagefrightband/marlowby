@@ -6,7 +6,7 @@
   "packageManager": "pnpm@12.6.0",
   "homepage": "https://www.marlowby.vercel.app/",
   "dependencies": {
-    "next": "^16.4.2",
+    "next": "^16.4.4",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "typescript": "^7.0.2"
@@ -23,12 +23,12 @@
     "Edge >= 90"
   ],
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.3.3",
-    "@types/node": "^26.6.5",
+    "@tailwindcss/postcss": "^4.3.4",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "postcss": "^8.5.31",
+    "postcss": "^8.5.32",
     "postcss-load-config": "^6.0.1",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.4"
   }
 }
